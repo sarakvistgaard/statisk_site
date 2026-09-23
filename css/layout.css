@@ -1,0 +1,112 @@
+/************************ Forside ************************/
+
+/************************ Produktliste ************************/
+
+/* på produktliste gør vi brug af subgrids for at give elementerne inde i hvert card det samme grid som dens parents (altså card´et) */
+
+/* minmax giver en fleksibilitet, den første værdi er minimum og den næste er maksimum. autofill gør at elementerne i div´en udfylder hele div´en */
+.product_list_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto auto 1fr auto 1fr;
+  gap: 40px;
+}
+
+/* nu vil vi gerne have elementerne inde i vores cards (div´erne inde i .product_list_container) til at flugte med hinanden
+ */
+
+.product {
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: 5px;
+
+  /* vi skal have kortene til at fylde ud og bruge det grid osm dens parent har (dvs vi skal sige hvor meget den skal fylde)*/
+  grid-row: span 5;
+
+  /* sætter relative på for at soldout kan finde den */
+  position: relative;
+}
+
+.udsalg_flex {
+  display: flex;
+  flex-direction: rows;
+  gap: 10px;
+}
+
+/************************************************************************************************************************/
+@media (min-width: 850px) {
+  /************************ Forside ************************/
+
+  .index_kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /************************ Produktliste ************************/
+  .produktliste_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /************************** Produkt ****************************/
+
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .product_container img {
+    display: block;
+    align-self: stretch;
+    object-fit: cover;
+  }
+
+  .product_container_tekst {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    padding-bottom: 6rem;
+  }
+
+  /* .product_container_tekst {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  button {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    justify-self: center;
+  } */
+
+  p {
+    font-size: larger;
+  }
+
+  form {
+    font-size: larger;
+  }
+
+  /* label er et inline element, så for at få select menuen til at lægge sig under laver jeg det til et block element */
+  label {
+    display: block;
+  }
+
+  select {
+    font-size: medium;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .product_grid {
+    margin-inline: 60px;
+  }
+
+  button {
+    width: 200px;
+    height: fit-content;
+  }
+}

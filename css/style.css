@@ -1,0 +1,126 @@
+/* *********************** Forside ***********************/
+
+.index_kategorier div {
+  padding: 30px;
+  margin: 20px;
+  background-color: rgb(195, 194, 194);
+  text-decoration: none;
+  font-size: large;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+}
+
+.overskrift_forside {
+  margin-left: 20px;
+  font-size: xx-large;
+}
+
+/************************ Produktliste ************************/
+
+.productlist_headline {
+  font-size: xx-large;
+  margin-block: 1rem;
+}
+
+.categori_description {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: large;
+}
+
+.product_list_container {
+  margin-bottom: 40px;
+}
+
+.product {
+  align-items: center;
+}
+
+.soldout_tag {
+  visibility: hidden;
+}
+
+/* stjernen betyder at den tager det hele (ogås børnebørn som fx prisen som derfor bliver meget utydelig (men det betyder ikke noget fordi den er udsolgt) */
+.soldout * {
+  opacity: 50%;
+}
+
+/* der er nogle elementer som er markeret som udvolgt, og de elementer har en soldout class. 
+så vi vil gerne have at soldout tagget vises på de html elementerne som har en soldout class  */
+.soldout .soldout_tag {
+  opacity: 100%;
+  visibility: visible;
+  /* vi bruger position absolutte til at sætte soldout tagget udenpå, MEN elementet leder så efter et elemtn med position:relative, så derfor er det VIGTIGT at sætte position:relative på .product */
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  top: 0;
+  left: 0;
+}
+
+.udsalg {
+  visibility: hidden;
+}
+
+/* gør udsalg synlig på de elementer som både har class´en .discount og class´en .udsalg */
+.discount .udsalg {
+  visibility: visible;
+}
+
+/* hvis elementet har de tre class´es så gør teksten gennemstreget */
+.discount .udsalg_flex .gammel_pris {
+  text-decoration: line-through;
+}
+
+/* hvis elementet har de tre class´es så gør teksten rød */
+.discount .udsalg .ny_pris {
+  color: red;
+}
+
+/************************ Produkt ************************/
+
+.product_container {
+  margin-bottom: 6rem;
+}
+
+.product_container_overskrift {
+  margin-block: 2rem;
+}
+
+.product_container_tekst h1 {
+  margin-block: 1rem;
+}
+
+.product_container_tekst h2 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.product_container_tekst p {
+  margin-block: 0.5rem;
+}
+
+form {
+  margin-block: 3rem;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  justify-items: center;
+  background-color: rgb(218, 146, 69);
+  /* margin-bottom: 6rem; */
+}
+
+.produktbeskrivelse {
+  padding-block: 3rem;
+
+  border-top: 1px dotted black;
+}
+
+.produktbeskrivelse p {
+  padding-block: 10px;
+}

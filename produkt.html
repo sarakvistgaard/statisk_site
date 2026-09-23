@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/generel.css">
+
+    <title>Produkt</title>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img class="logo" src="img/FashionRUs.svg" alt="Logo">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="produktliste.html">Kategorier</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+        <div class="product_grid">
+            <div class="product_container">
+
+                <div class="product_container_img">
+                    <img src="img/img_1.webp" alt="produktbillede">
+                </div>
+
+                <div class="product_container_tekst">
+                    <div>
+                        <h1>Knee length dress</h1>
+                        <h2>849 kr</h2>
+                    </div>
+
+                    <div>
+                        <p>Hverdagskjole - bomuld</p>
+                        <p>Farve: brun</p>
+                    </div>
+
+                    <!-- laver en form for at kunne lave en drop down menu med størrelserne -->
+                    <form action="">
+                        <label for="size">Størrelse:</label>
+
+                        <!-- id er vigtigt fordi det hjælper til at koble elementerne sammen. i label skriver jeg for=size og så i select giver jeg den id=size for at koble de to ting sammen -->
+                        <select name="size" id="size">
+                            <option value="Vælg en størrelse">Vælg en størrelse</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+
+                    </form>
+
+                    <button>Læg i kurv</button>
+                </div>
+            </div>
+
+            <div class="produktbeskrivelse">
+                <h2>Produktbeskrivelse</h2>
+                <p>Mød din nye hverdagsfavorit. Sofie-kjolen kombinerer ubesværet elegance med ultimativ komfort,
+                    hvilket
+                    gør den perfekt til både kontoret og en afslappet weekendtur.
+                    Kjolen er designet i et klassisk slå-om-snit, der fremhæver taljen på smukkeste vis og giver en
+                    fleksibel pasform. Det bløde og åndbare materiale falder tungt og flot mod kroppen uden at krølle,
+                    så du
+                    kan føle dig skarp
+                    hele dagen. Style den med dine yndlingssneakers til hverdag, eller pift den op med et par korte
+                    støvler
+                    og en læderjakke
+                    til fyraftenshyggen.</p>
+            </div>
+
+            <div class="produktbeskrivelse">
+                <h2>Detaljer og pasform</h2>
+                <p>Pasform: Normal i størrelsen (regulær pasform med justerbart bindebånd) </p>
+                <p>
+                    Længde: Går til lige under knæet (Midi-længde) </p>
+                <p> Detaljer: V-udskæring og lange ærmer med elastikmanchett</p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+    <footer>
+
+        <div>
+            <p>Tekst til footeren</p>
+            <img src="" alt="">
+        </div>
+    </footer>
+
+</body>
+
+</html>
